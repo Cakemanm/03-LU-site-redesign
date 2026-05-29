@@ -1,26 +1,159 @@
 /* Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  color: royalblue;
+  color: rgb(164, 183, 238);
   text-align: center;
-  background-color: bisque;
-  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  background-color: #4e6a5a;
+  font-family: "Lora", Georgia, "Serif", cursive;
+  line-height: 1.6;
 }
 
 /* Typography */
 
+h1 {
+  font-size: 50px;
+  margin: 0;
+}
+h2 {
+  font-size: 32px;
+  margin-bottom: 12px;
+}
+h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+p {
+  margin-bottom: 6px;
+}
+
+header {
+  background-color: #2e4a3b;
+  padding: 24px 0;
+  border-bottom: 2px solid #ba404f;
+}
+
 /* Links & Accents */
+a {
+  color: #8aad96;
+}
+
+.accent {
+  color: #ba404f;
+}
+
+.tagline {
+  font-size: 15px;
+  color: #8aad96;
+  margin-top: 4px;
+  font-style: italic;
+}
 
 /* Images */
+img {
+  max-width: 100%;
+  height: auto;
+}
 
 /* Hero Section */
+#hero-about {
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#hero-container {
+  display: flex;
+  flex-shrink: 0;
+  padding: 16px;
+  justify-content: center;
+}
+
+#hero-container .hero-img {
+  width: 500px;
+  height: 500px;
+  border: 4px solid #ba404f;
+  outline: 2px solid #8aad96;
+  object-fit: cover;
+}
 
 /* Main Content */
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+section {
+  margin-top: 48px;
+  padding-top: 24px;
+  border-top: 2px solid #ba404f;
+}
 
 /* About Section */
+.about-us {
+  text-align: left;
+  margin-top: 24px;
+  padding-top: 12px;
+  border-top: none;
+}
+
+.about-us p {
+  max-width: 800px;
+  margin: 0 auto 12px auto;
+  color: #a8c4b8;
+}
 
 /* Specials Section */
+.specials-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  margin-top: 24px;
+}
+
+.special-offer {
+  background-color: #2e4a3b;
+  padding: 16px;
+  border: 2px solid #ba404f;
+  border-radius: 8px;
+}
+
+.special-offer img {
+  width: 80%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.price-now {
+  color: #ba404f;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.price-was {
+  color: #8aad96;
+  text-decoration: line-through;
+}
 
 /* Visit Us Section */
+.contact-info {
+  margin-top: 24px;
+  color: #a8c4b8;
+}
+
+address {
+  font-style: normal;
+  margin-top: 12px;
+}
 
 iframe {
   width: 100%;
@@ -30,4 +163,194 @@ iframe {
 /* Footer */
 footer {
   margin-top: 48px;
+  background-color: #2e4a3b;
+  border-top: 2px solid #ba404f;
+  padding: 16px;
+}
+
+.footer-nav {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.footer-nav a {
+  color: #8aad96;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 16px;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.footer-nav a:hover {
+  border-color: #ba404f;
+  background-color: #ba404f;
+  color: #fff;
+}
+
+.footer-social {
+  margin-top: 12px;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.footer-social a {
+  color: #8aad96;
+  font-size: 20px;
+  transition: color 0.3s ease;
+}
+
+.footer-social a:hover {
+  color: #ba404f;
+}
+
+.footer-content p {
+  color: #a8c4b8;
+  margin-top: 12px;
+}
+
+/* Naviation */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  padding-top: 16px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: #8aad96;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 16px;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  border-color: #ba404f;
+  background-color: #ba404f;
+  color: #fff;
+}
+
+.nav-active {
+  border-color: #ba404f;
+  background-color: #ba404f;
+  color: #fff;
+}
+
+/* Testimonials */
+.testimonials-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 24px;
+}
+
+.testimonial {
+  background-color: #2e4a3b;
+  padding: 16px;
+  border: 2px solid #ba404f;
+  border-radius: 8px;
+}
+
+.testimonial .quote {
+  font-style: italic;
+  color: #a8c4b8;
+  margin-bottom: 12px;
+}
+
+.testimonial .author {
+  font-weight: bold;
+  color: #ba404f;
+}
+
+/* Seasonal Section */
+.seasonal-subtitle {
+  color: #8aad96;
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
+.seasonal-feature {
+  background-color: #2e4a3b;
+  padding: 16px;
+  border: 2px solid #ba404f;
+  border-radius: 8px;
+  margin-top: 24px;
+}
+
+.seasonal-details h3 {
+  color: #ba404f;
+  margin-bottom: 8px;
+}
+
+.seasonal-details p {
+  color: #a8c4b8;
+}
+
+/* Seasonal Arrangements */
+.seasonal-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+  margin-top: 24px;
+}
+
+.seasonal-arrangement {
+  background-color: #2e4a3b;
+  padding: 16px;
+  border: 2px solid #ba404f;
+  border-radius: 8px;
+}
+
+.seasonal-arrangement img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.seasonal-arrangement h3 {
+  color: #c8d8f0;
+  margin-bottom: 6px;
+}
+
+.seasonal-arrangement p {
+  color: #a8c4b8;
+  font-size: 14px;
+}
+
+/* About Fran */
+.about-fran {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  margin-top: 24px;
+}
+
+.fran-values {
+  background-color: #2e4a3b;
+  padding: 16px;
+  border: 2px solid #ba404f;
+  border-radius: 8px;
+  max-width: 800px;
+}
+
+.value-card {
+  margin-bottom: 12px;
+}
+
+.value-card h3 {
+  color: #ba404f;
+  margin-bottom: 8px;
+}
+
+.value-card p {
+  color: #a8c4b8;
 }
